@@ -58,7 +58,10 @@ public class Customer {
 
         ShippingService.shipItems(shippableItems);
 
-        System.out.println("+----------- Checkout Summary -----------+");
+        System.out.println("\n+----------- Checkout Summary -----------+");
+        System.out.printf("| Customer Name        | %-15s |\n", this.name);
+        System.out.printf("| Customer Email       | %-15s |\n", this.email);
+        System.out.println("+----------------------+-----------------+");
         System.out.printf("| %-20s | $%14.2f |\n", "Subtotal", subtotal);
         System.out.printf("| %-20s | $%14.2f |\n", "Shipping Fee", shippingFees);
         System.out.printf("| %-20s | $%14.2f |\n", "Total Paid", total);
